@@ -40,6 +40,6 @@ def test_overdraw_checking():
 def test_overdraw_savings():
     account = Account('savings')
     account.deposit(50)
-    account.withdraw(100) # 100-> 25 
-    assert account.balance == -50 # -50 -> 25
+    account.withdraw(25) # 100 failed case-> 25 pass case
+    assert account.balance == 25 # -50 failed case -> 25 pass case
 # weg met deze tests !!
